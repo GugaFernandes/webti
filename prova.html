@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visualizar Lotes</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #3c6c89;
+      display: flex;
+      height: 100vh;
+      color: white;
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      background-color: #2f5771;
+      padding: 10px 20px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .pesquisa-container {
+      display: flex;
+      align-items: center;
+      margin: 10px 0 20px 0;
+      gap: 10px;
+    }
+
+    .pesquisa-container label {
+      font-weight: bold;
+    }
+
+    .pesquisa-container input {
+      padding: 8px;
+      border-radius: 10px;
+      border: none;
+      width: 150px;
+    }
+
+    .pesquisa-container button {
+      padding: 8px 15px;
+      border-radius: 10px;
+      border: none;
+      background-color: #dcdcdc;
+      color: black;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #3c6c89;
+    }
+
+    th, td {
+      border: 2px solid white;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #3c6c89;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      width: 150px;
+      background-color: #3c6c89;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-left: 2px dotted #6a91ab;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .icon-button {
+      background-color: #2f5771;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      font-size: 32px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .icon-button:hover {
+      background-color: #4a7a9b;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        width: 100%;
+        border-left: none;
+        border-top: 2px dotted #6a91ab;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h2>Visualizar Lotes</h2>
+    <div class="pesquisa-container">
+      <label for="pesquisa">Pesquisa</label>
+      <input type="text" id="pesquisa" />
+      <button>Filtros</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Referência</th>
+          <th>Prazo</th>
+          <th>Entrada</th>
+          <th>Saída</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sidebar">
+    <div class="icon-button">👤</div>
+    <div class="icon-button">👕</div>
+    <div class="icon-button">📟</div>
+    <div class="icon-button">🕒</div>
+    <div class="icon-button">👁️</div>
+    <div class="icon-button">🏠</div>
+  </div>
+</body>
+</html>
