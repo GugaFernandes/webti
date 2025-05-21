@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O que é JavaScript?</title>
+  <script>
+    // Exibe uma saudação ao carregar a página
+    alert("Bem-vindo! Vamos aprender sobre JavaScript.");
+
+    // Registra uma mensagem no console
+    console.log("Página carregada com sucesso!");
+
+    // Atualiza o parágrafo com a hora atual
+    window.onload = function () {
+      const agora = new Date();
+      document.getElementById("hora").innerHTML = "Hora atual: " + agora.toLocaleTimeString();
+    };
+  </script>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0;">
+  
+  <h1 id="titulo">O que é JavaScript?</h1>
+  
+  <p id="explicacao">
+    O JavaScript foi criado em 1995 por Brendan Eich para adicionar interatividade às páginas web. Ele surgiu com o objetivo de tornar os sites mais dinâmicos e responsivos, diferente do HTML e CSS, que são estáticos.<br><br>
+    A principal diferença de execução está no ambiente: JavaScript no <strong>navegador</strong> é executado no lado do cliente (frontend), enquanto no <strong>servidor</strong> é possível executar JavaScript usando plataformas como o Node.js (backend).<br><br>
+    No navegador, o JavaScript funciona dentro de um ambiente seguro chamado <strong>sandbox</strong>, que impede o acesso direto ao sistema do usuário, garantindo proteção contra códigos maliciosos.<br><br>
+    Entre os objetos globais do JavaScript, destacam-se:<br>
+    <strong>document</strong> – permite manipular a estrutura HTML da página.<br>
+    <strong>console</strong> – exibe mensagens de depuração no console do navegador.<br>
+    <strong>alert</strong> – mostra caixas de diálogo com mensagens para o usuário.<br>
+  </p>
+
+  <p id="hora" style="font-weight: bold; color: #333;"></p>
+
+</body>
+</html>
