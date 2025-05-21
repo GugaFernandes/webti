@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tipos de Variáveis e Operadores</title>
+  <script>
+    function mostrarTipos() {
+      // Declaração das variáveis
+      let nome = "João";                 // string
+      let idade = 25;                    // number
+      let ativo = true;                  // boolean
+      let indefinido;                   // undefined
+      let vazio = null;                 // null
+      let pessoa = {nome: "Ana"};       // object
+      let lista = [1, 2, 3];            // array
+
+      // Mostrando tipos com typeof
+      document.getElementById("pstring").innerText = "Tipo de nome: " + typeof nome;
+      document.getElementById("pnumero").innerText = "Tipo de idade: " + typeof idade;
+      document.getElementById("pboolean").innerText = "Tipo de ativo: " + typeof ativo;
+      document.getElementById("pundefined").innerText = "Tipo de indefinido: " + typeof indefinido;
+      document.getElementById("pnull").innerText = "Tipo de vazio: " + typeof vazio; // retorna 'object'
+      document.getElementById("pobjeto").innerText = "Tipo de pessoa: " + typeof pessoa;
+      document.getElementById("parray").innerText = "Tipo de lista: " + typeof lista;
+
+      // Operações entre tipos diferentes
+      let resultado1 = nome + idade;           // string + number → concatenação
+      let resultado2 = ativo * idade;          // boolean * number → true é 1
+      let resultado3 = nome * 2;               // string * number → NaN
+
+      // Mostrar no console
+      console.log("nome + idade =", resultado1);
+      console.log("ativo * idade =", resultado2);
+      console.log("nome * 2 =", resultado3);
+
+      // Mostrar na página
+      document.getElementById("op1").innerText = `"João" + 25 = ${resultado1} → Concatena, pois a string prevalece.`;
+      document.getElementById("op2").innerText = `true * 25 = ${resultado2} → true vira 1, então 1 * 25 = 25.`;
+      document.getElementById("op3").innerText = `"João" * 2 = ${resultado3} → Não faz sentido multiplicar texto por número, retorna NaN.`;
+    }
+  </script>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <h1>Tipos de Variáveis e Operadores</h1>
+
+  <button onclick="mostrarTipos()">Mostrar Tipos e Operações</button>
+
+  <h2>Tipos de Variáveis</h2>
+  <p id="pstring"></p>
+  <p id="pnumero"></p>
+  <p id="pboolean"></p>
+  <p id="pundefined"></p>
+  <p id="pnull"></p>
+  <p id="pobjeto"></p>
+  <p id="parray"></p>
+
+  <h2>Operações entre Tipos</h2>
+  <p id="op1"></p>
+  <p id="op2"></p>
+  <p id="op3"></p>
+</body>
+</html>
