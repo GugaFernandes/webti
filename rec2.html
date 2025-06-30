@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Lotes</title>
+  <style>
+    * {
+      box-sizing: border-box; /* tudo dentro do elemento conta no tamanho, evita bagunça */
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #3c6c89; /* fundo azul escuro */
+      display: flex;
+      height: 100vh;
+      color: white;
+    }
+    .main {
+      flex: 1; /* ocupa o espaço principal da tela */
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 0;
+      background: #2f5771; /* cor de fundo do título */
+      padding: 10px 20px;
+      border-radius: 20px; /* cantos arredondados no título */
+      width: fit-content; /* largura só o suficiente pro conteúdo */
+    }
+    .pesquisa-container {
+      display: flex;
+      align-items: center;
+      margin: 10px 0 20px;
+      gap: 10px; /* espaço entre os itens */
+    }
+    .pesquisa-container label {
+      font-weight: bold; /* deixa o texto "Pesquisa" em negrito */
+    }
+    .pesquisa-container input {
+      padding: 8px;
+      border-radius: 10px;
+      border: none;
+      width: 150px;
+    }
+    .pesquisa-container button {
+      padding: 8px 15px;
+      border-radius: 10px;
+      border: none;
+      background: #dcdcdc; /* cinzinha claro */
+      color: black;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse; /* tira os espaços entre as bordas da tabela */
+      background: #3c6c89; /* fundo azul igual ao resto */
+    }
+    th, td {
+      border: 2px solid white;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #3c6c89;
+      font-weight: bold;
+    }
+    .sidebar {
+      width: 150px;
+      background: #3c6c89;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-left: 2px dotted #6a91ab; /* linha pontilhada separando a barra lateral */
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .icon-button {
+      background: #2f5771;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      font-size: 32px;
+      cursor: pointer;
+      transition: background 0.3s; /* faz um efeito suave quando passa o mouse */
+    }
+    .icon-button:hover {
+      background: #4a7a9b; /* muda a cor quando passa o mouse em cima */
+    }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column; /* quando for tela pequena, muda o layout pra coluna */
+      }
+      .sidebar {
+        flex-direction: row;
+        width: 100%;
+        border-left: none;
+        border-top: 2px dotted #6a91ab; /* linha separadora agora em cima */
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h2>Visualizar Lotes</h2> <!-- título principal da tela -->
+    <div class="pesquisa-container">
+      <label for="pesquisa">Pesquisa</label> <!-- rótulo do campo de busca -->
+      <input type="text" id="pesquisa"> <!-- campo de texto pra digitar -->
+      <button>Filtros</button> <!-- botão que futuramente pode abrir filtros -->
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Referência</th>
+          <th>Prazo</th>
+          <th>Entrada</th>
+          <th>Saída</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- só uns espaços em branco na tabela, é só visual mesmo -->
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sidebar">
+    <!-- barra lateral com uns botões só de ícone, só visual, pode trocar depois -->
+    <div class="icon-button">👤</div>
+    <div class="icon-button">👕</div>
+    <div class="icon-button">📟</div>
+    <div class="icon-button">🕒</div>
+    <div class="icon-button">👁️</div>
+    <div class="icon-button">🏠</div>
+  </div>
+</body>
+</html>

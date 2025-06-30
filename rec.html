@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"> <!-- Exibe acentos e símbolos de boa -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Deixa responsivo no celular -->
+<title>GSF - Cadastro</title>
+<style>
+  * {
+    box-sizing: border-box; /* evita bug de tamanho nos elementos */
+  }
+
+  body {
+    margin: 0;
+    font-family: sans-serif; /* Fonte básica padrão */
+    background-color: #3c6c89; /* Fundo azul escuro */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: #2f5771; /* Fundo do bloco do formulário */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3); /* Sombra pra destacar */
+  }
+
+  .logo {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .campo {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    width: 250px;
+  }
+
+  .campo input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    flex: 1;
+    font-size: 16px;
+  }
+
+  .icone {
+    font-size: 18px;
+  }
+
+  .olho {
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #bcbcbc;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 class="logo">GSF</h1>
+  <form class="formulario">
+    <div class="campo">
+      <span class="icone">👤</span>
+      <input type="text" placeholder="Nome completo" required>
+    </div>
+    <div class="campo">
+      <span class="icone">📧</span>
+      <input type="email" placeholder="E-mail" required>
+    </div>
+    <div class="campo">
+      <span class="icone">🔒</span>
+      <input type="password" placeholder="Senha" id="senha" required>
+      <span class="olho" onclick="toggleSenha()">👁️</span>
+    </div>
+    <button type="submit">Confirmar</button>
+  </form>
+</div>
+
+<script>
+// Função pra mostrar ou esconder a senha
+function toggleSenha() {
+  const input = document.getElementById('senha');
+  input.type = input.type === 'password' ? 'text' : 'password';
+}
+</script>
+</body>
+</html>
